@@ -1,31 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #faf6ee;
-  --color-ink: #2b2622;
-  --color-ink-2: #4d453d;
+  /* Surfaces */
+  --color-canvas: #f7f8f3;
   --color-surface: #ffffff;
-  --color-surface-2: #f2ede3;
-  --color-line: #e6decf;
-  --color-line-soft: #efe9dc;
-  --color-muted: #8b8273;
-  --color-muted-2: #b5ab99;
-  --color-cream: #eee6d6;
+  --color-surface-2: #eef0ea;
 
-  --color-sage: #6f9080;
-  --color-sage-d: #4f7064;
-  --color-sage-l: #c8d4cd;
-  --color-sage-ll: #e2eae5;
-  --color-sage-bg: #eaf0ec;
+  /* Borders */
+  --color-line: #dde2d5;
+  --color-line-soft: #e8ece0;
 
-  --color-crit: #c2453e;
-  --color-crit-bg: #f7e2e0;
-  --color-ok: #5a8c6f;
-  --color-ok-bg: #e2ede6;
-  --color-warn: #c68a2e;
-  --color-warn-bg: #f5e8d0;
+  /* Text */
+  --color-ink: #1a130d;
+  --color-ink-2: #44403b;
+  --color-muted: #7a7a6e;
+  --color-muted-2: #aeafa0;
+  --color-cream: #f7f8f3;
 
-  --color-bubble-out: #2b2622;
+  /* Brand — sage green + olive accent */
+  --color-sage: #537c57;
+  --color-sage-d: #3e6042;
+  --color-sage-l: #afbb8b;
+  --color-sage-ll: #dce6dc;
+  --color-sage-bg: #e8efe7;
+
+  /* Status (medical context) */
+  --color-crit: #b84540;
+  --color-crit-bg: #f4dedb;
+  --color-ok: #537c57;
+  --color-ok-bg: #e8efe7;
+  --color-warn: #b07924;
+  --color-warn-bg: #f2e5c9;
+
+  /* Chat bubbles */
+  --color-bubble-out: #537c57;
   --color-bubble-in: #ffffff;
 
   --font-sans: "Manrope", system-ui, sans-serif;
