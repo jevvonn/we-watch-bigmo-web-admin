@@ -37,7 +37,7 @@ function Bubble({ msg, mine, avatar, showAvatar }: BubbleProps) {
           className={`max-w-[460px] px-3.5 py-2.5 text-sm leading-[1.5] whitespace-pre-wrap break-words rounded-[18px]
             ${
               mine
-                ? `bg-bubble-out text-cream rounded-br-md shadow-[0_1px_0_rgba(0,0,0,.05)] ${msg.pending ? "opacity-70" : ""}`
+                ? `bg-bubble-out text-cream rounded-br-md shadow-[0_1px_0_rgba(0,0,0,.05)]`
                 : "bg-bubble-in text-ink rounded-bl-md border border-line-soft"
             }`}
         >
