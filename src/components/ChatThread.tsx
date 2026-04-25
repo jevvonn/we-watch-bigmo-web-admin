@@ -45,13 +45,11 @@ function Bubble({ msg, mine, avatar, showAvatar }: BubbleProps) {
         </div>
         <div
           className={`text-[10.5px] text-muted mt-1 flex items-center gap-1 font-mono
-          ${mine ? "justify-end" : "justify-start pl-[38px]"}`}
+          ${mine ? "justify-end" : "justify-end flex-row-reverse"}`}
         >
           <span>{formatMessageTime(msg.createdAt)}</span>
 
-          {mine && (
-            <Check size={12} strokeWidth={1.75} className="text-muted-2" />
-          )}
+          <Check size={12} strokeWidth={1.75} className="text-muted-2" />
         </div>
       </div>
     </div>

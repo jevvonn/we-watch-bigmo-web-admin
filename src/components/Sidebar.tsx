@@ -1,14 +1,5 @@
 import { useState } from "react";
-import {
-  MessageSquare,
-  Users,
-  Calendar,
-  FileText,
-  Activity,
-  Settings,
-  LogOut,
-  type LucideIcon,
-} from "lucide-react";
+import { MessageSquare, LogOut, type LucideIcon } from "lucide-react";
 import type { User } from "../types";
 import { avatarFor } from "../utils";
 
@@ -55,16 +46,8 @@ export function Sidebar({ unread, user, connected, onLogout }: SidebarProps) {
 
   return (
     <aside className="w-[76px] bg-ink text-cream flex flex-col items-center py-5 gap-1 shrink-0 relative">
-      <div className="w-11 h-11 bg-sage rounded-xl flex items-center justify-center mb-4 shadow-[0_2px_0_rgba(0,0,0,.2)_inset]">
-        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-          <path
-            d="M8 24V8l8 8 8-8v16"
-            stroke="#FBF8F2"
-            strokeWidth="2.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+      <div className="w-11 h-11 bg-sage rounded-xl flex items-center justify-center mb-4">
+        <img src="/logo-white.png" alt="Narabuna" className="w-6 h-6" />
       </div>
 
       {NAV.map((item) => (
@@ -79,8 +62,6 @@ export function Sidebar({ unread, user, connected, onLogout }: SidebarProps) {
       ))}
 
       <div className="flex-1" />
-
-      <NavBtn Icon={Settings} label="Settings" />
 
       <div className="mt-2.5 relative">
         <button

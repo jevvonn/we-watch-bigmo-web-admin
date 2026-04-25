@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Search, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import type { ConversationRoom } from "../types";
 import { avatarFor, formatMessageTime } from "../utils";
 
@@ -18,13 +17,7 @@ export function ConversationList({
   currentUserId,
   onSelect,
 }: Props) {
-  const [query, setQuery] = useState("");
-
-  const filtered = conversations.filter((c) => {
-    const q = query.toLowerCase();
-    if (!q) return true;
-    return c.partner.fullName.toLowerCase().includes(q);
-  });
+  const filtered = conversations;
 
   return (
     <div className="w-[340px] bg-surface border-r border-line flex flex-col shrink-0">
@@ -37,16 +30,6 @@ export function ConversationList({
             ? "Loading…"
             : `${conversations.length} ${conversations.length === 1 ? "chat" : "chats"}`}
         </p>
-
-        <div className="flex items-center gap-2 bg-surface-2 border border-line rounded-full px-3.5 py-2 text-muted">
-          <Search size={15} strokeWidth={1.75} />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search by name"
-            className="flex-1 border-0 outline-none bg-transparent text-[13.5px] text-ink placeholder:text-muted"
-          />
-        </div>
       </div>
 
       <div className="flex-1 overflow-y-auto py-1 border-t border-line-soft">
