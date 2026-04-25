@@ -40,10 +40,6 @@ function NavBtn({ Icon, active, badge, label, onClick }: NavBtnProps) {
 
 const NAV: { id: string; Icon: LucideIcon; label: string }[] = [
   { id: "chat", Icon: MessageSquare, label: "Messages" },
-  { id: "patients", Icon: Users, label: "Contacts" },
-  { id: "cal", Icon: Calendar, label: "Schedule" },
-  { id: "notes", Icon: FileText, label: "Notes" },
-  { id: "vitals", Icon: Activity, label: "Vitals" },
 ];
 
 interface SidebarProps {

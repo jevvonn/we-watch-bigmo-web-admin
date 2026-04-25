@@ -6,21 +6,9 @@ import {
   type KeyboardEvent,
   type UIEvent,
 } from "react";
-import {
-  Phone,
-  Video,
-  MoreHorizontal,
-  Send,
-  CheckCheck,
-  Check,
-  Clock,
-  Loader2,
-  MessageSquare,
-} from "lucide-react";
+import { Send, Check, Loader2, MessageSquare } from "lucide-react";
 import type { ConversationRoom, UiMessage } from "../types";
 import { avatarFor, formatMessageTime } from "../utils";
-
-const QUICK: string[] = [];
 
 interface BubbleProps {
   msg: UiMessage;
@@ -182,11 +170,6 @@ export function ChatThread({
     );
   }
 
-  const dateLabel = new Date().toLocaleDateString("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "short",
-  });
   const partnerAvatar = avatarFor(room.partner.fullName);
 
   return (
@@ -201,24 +184,6 @@ export function ChatThread({
           <h2 className="text-base font-bold m-0 leading-tight">
             {room.partner.fullName}
           </h2>
-          <div className="text-[12.5px] text-muted mt-0.5 flex items-center gap-2">
-            <span
-              className={`w-[7px] h-[7px] rounded-full inline-block ${connected ? "bg-ok" : "bg-warn"}`}
-            />
-            <span>{connected ? "Active now" : "Reconnecting…"}</span>
-            <span className="text-muted-2">·</span>
-            <span className="font-mono text-[11.5px]">{room.partner.role}</span>
-          </div>
-        </div>
-        <div className="ml-auto flex gap-1.5">
-          {[Phone, Video, MoreHorizontal].map((Ic, i) => (
-            <button
-              key={i}
-              className="w-[38px] h-[38px] rounded-xl flex items-center justify-center text-ink-2 bg-surface-2 hover:bg-line transition-colors"
-            >
-              <Ic size={16} strokeWidth={1.75} />
-            </button>
-          ))}
         </div>
       </header>
 
@@ -239,12 +204,6 @@ export function ChatThread({
             )}
           </div>
         )}
-
-        <div className="flex items-center gap-3 my-6 mb-3 text-muted text-[11px] font-mono uppercase tracking-[0.08em]">
-          <span className="flex-1 h-px bg-line" />
-          <span>Today · {dateLabel}</span>
-          <span className="flex-1 h-px bg-line" />
-        </div>
 
         {loading && (
           <div className="text-center text-muted text-[13px] py-10 flex items-center justify-center gap-2">
