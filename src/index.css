@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #faf6ee;
+  --color-ink: #2b2622;
+  --color-ink-2: #4d453d;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2ede3;
+  --color-line: #e6decf;
+  --color-line-soft: #efe9dc;
+  --color-muted: #8b8273;
+  --color-muted-2: #b5ab99;
+  --color-cream: #eee6d6;
+
+  --color-sage: #6f9080;
+  --color-sage-d: #4f7064;
+  --color-sage-l: #c8d4cd;
+  --color-sage-ll: #e2eae5;
+  --color-sage-bg: #eaf0ec;
+
+  --color-crit: #c2453e;
+  --color-crit-bg: #f7e2e0;
+  --color-ok: #5a8c6f;
+  --color-ok-bg: #e2ede6;
+  --color-warn: #c68a2e;
+  --color-warn-bg: #f5e8d0;
+
+  --color-bubble-out: #2b2622;
+  --color-bubble-in: #ffffff;
+
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes bounce-dot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+.dot-anim {
+  animation: bounce-dot 1.2s infinite;
+}
